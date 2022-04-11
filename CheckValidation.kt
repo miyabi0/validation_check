@@ -6,7 +6,7 @@ class CheckValidation {
      * @param Date 日付?
      * @return パラメータが日付ならtrue
      */
-    fun isDate(Date: String?): Boolean {
+    fun isDate(Date: String): Boolean {
         return try {
             val dtf: java.time.format.DateTimeFormatter =
                 java.time.format.DateTimeFormatter.ofPattern("yyyy/MM/dd")
@@ -98,7 +98,7 @@ class CheckValidation {
      * @param regularExpression　正規表現
      * @return 一致したらtrueを返す。
      */
-    private fun checkPattern(str: String, regularExpression: String): Boolean { //[40]
+    private fun checkPattern(str: String, regularExpression: String): Boolean { 
         val pattern: java.util.regex.Pattern = java.util.regex.Pattern.compile(regularExpression)
         val matcher: java.util.regex.Matcher = pattern.matcher(str)
         return if (matcher.find()) {
