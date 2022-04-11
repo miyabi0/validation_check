@@ -100,7 +100,7 @@ public class CheckValidation{
      * @param regularExpression　正規表現
      * @return 一致したらtrueを返す。
      */
-	private static boolean checkPattern(String str, String regularExpression) {//[40]
+	private static boolean checkPattern(String str, String regularExpression) {
 		Pattern pattern = Pattern.compile(regularExpression);
 		Matcher matcher = pattern.matcher(str);
 		if (matcher.find()) {
